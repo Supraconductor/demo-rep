@@ -2,14 +2,44 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "adminUsername": {
-      "value": "GEN-USER"
-    },
-    "adminPassword": {
-      "value": "GEN-PASSWORD"
-    },
-    "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE"
-    }
+      "location": {
+          "value": "eastus"
+      },
+      "virtualMachineName": {
+          "value": "vm1"
+      },
+      "virtualMachineSize": {
+          "value": "Standard_D1_v2"
+      },
+      "adminUsername": {
+          "value": "jfdore"
+      },
+      "virtualNetworkName": {
+          "value": "demo2-vnet"
+      },
+      "networkInterfaceName": {
+          "value": "vm1586"
+      },
+      "networkSecurityGroupName": {
+          "value": "vm1-nsg"
+      },
+      "adminPassword": {
+          "value": null
+      },
+      "addressPrefix": {
+          "value": "10.1.2.0/24"
+      },
+      "subnetName": {
+          "value": "default"
+      },
+      "subnetPrefix": {
+          "value": "10.1.2.0/24"
+      },
+      "publicIpAddressName": {
+          "value": "vm1-ip"
+      },
+      "publicIpAddressType": {
+          "value": "Dynamic"
+      }
   }
 }
