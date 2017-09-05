@@ -66,20 +66,17 @@
               "osProfile": {
                   "computerName": "[parameters('virtualMachineName')]",
                   "adminUsername": "[parameters('adminUsername')]",
-                  "adminPassword": "[parameters('adminPassword')]",
-                  "windowsConfiguration": {
-                      "provisionVmAgent": "true"
-                  }
+                  "adminPassword": "[parameters('adminPassword')]"
               },
               "hardwareProfile": {
                   "vmSize": "[parameters('virtualMachineSize')]"
               },
               "storageProfile": {
-                  "imageReference": {
-                      "publisher": "MicrosoftWindowsServer",
-                      "offer": "WindowsServer",
-                      "sku": "2016-Datacenter",
-                      "version": "latest"
+                "imageReference": {
+                    "publisher": "CoreOS",
+                    "offer": "CoreOS",
+                    "sku": "Stable",
+                    "version": "latest"
                   },
                   "osDisk": {
                       "createOption": "fromImage",
