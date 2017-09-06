@@ -160,11 +160,11 @@
       },
       {
           "name": "[parameters('publicIpAddressName')]",
-          "type": "Microsoft.Network/publicIpAddresses",
-          "apiVersion": "2017-08-01",
+          "type": "Microsoft.Network/publicIPAddresses",
+          "apiVersion": "2017-06-01",
           "location": "[parameters('location')]",
           "properties": {
-              "publicIpAllocationMethod": "[parameters('publicIpAddressType')]"
+              "publicIPAllocationMethod": "[parameters('publicIpAddressType')]"
           }
       },
       {
@@ -179,7 +179,7 @@
                       "properties": {
                           "priority": 1000,
                           "sourceAddressPrefix": "*",
-                          "protocol": "TCP",
+                          "protocol": "Tcp",
                           "destinationPortRange": "3389",
                           "access": "Allow",
                           "direction": "Inbound",
